@@ -1,8 +1,15 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Courier";
+  background-image: url("/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #c8e6ed;
 }
-
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
