@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    script(src='/shotgun/shotgun.client.js')
+  body
+    script.
+        $('body').shotgunConsole().execute('init');
