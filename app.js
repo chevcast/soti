@@ -57,8 +57,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-var server = app.listen(3000, function () {
-    console.log('Listening at http://localhost:3000');
+var server = app.listen(1337, function () {
+    console.log('Listening at http://localhost:1337');
 });
 
 var shotgun = require('shotgun'),
