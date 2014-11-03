@@ -1,6 +1,8 @@
 gs
 logs
 *.log
+*.swo
+*.swp
 
 # Runtime data
 pids
