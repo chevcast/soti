@@ -7,4 +7,9 @@ html
     script(src='/shotgun/shotgun.client.js')
   body
     script.
-        $('body').shotgunConsole().execute('init');
+      var shell = $('body').shotgunConsole();
+      shell.execute('init');
+      shell.socket.on('exit', function (cb) {
+        cb();
+        window.close();
+      });

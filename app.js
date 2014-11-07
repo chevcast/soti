@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var simpledb = require('mongoose-simpledb');
+var open = require('open');
 
 simpledb.init();
 
@@ -58,7 +59,8 @@ app.use(function(err, req, res, next) {
 });
 
 var server = app.listen(1337, function () {
-    console.log('Listening at http://localhost:1337');
+    console.log('Opening browser to http://localhost:1337');
+    open('http://localhost:1337');
 });
 
 var shotgun = require('shotgun'),
