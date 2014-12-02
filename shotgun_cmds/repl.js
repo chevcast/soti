@@ -13,13 +13,13 @@ exports.options = {
   }
 };
 
-exports.invoke = function (shell, option) {
+exports.invoke = function (shell, options) {
   var socket = shell.context.getVar('socket');
   var hasRepl = process.repls.hasOwnProperty(socket.id);
   
   if (!hasRepl || !options.data) {
     var inputStream = new stream.PassThrough();
-    var ouptutStream = new stream.PassThrough();
+    var outputStream = new stream.PassThrough();
 
     outputStream.on('data', function (data) {
       if (data !== null) {
