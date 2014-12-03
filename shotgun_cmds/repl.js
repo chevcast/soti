@@ -44,14 +44,14 @@ exports.invoke = function (shell, options) {
     var oldExitAction = exitCmd.action;
 
     clearCmd.action = function () {
-      shell.clear();
       oldClearAction.call(this);
+      shell.clear();
       replInstance.context.shell = shell;
     };
 
     exitCmd.action = function () {
-      shell.clearPrompt();
       oldExitAction.call(this);
+      shell.clearPrompt();
     };
 
     replInstance.context.shell = shell;
